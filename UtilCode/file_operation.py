@@ -1,6 +1,5 @@
 #encoding=utf8
 import os
-import json
 
 #dir operation
 def dir_scan(dir_path):
@@ -13,3 +12,8 @@ def file_line_read(filepath):
         for line in f:
             line = line.strip()
             print line
+
+def ropen(filename):
+    if os.path.exists(filename):
+        os.remove(filename)
+    return open(filename, "a+")
