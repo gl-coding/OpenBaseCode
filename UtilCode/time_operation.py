@@ -21,6 +21,11 @@ def get_yestoday():
     strf = now.strftime('%d-%m-%Y %H:%M:%S')
     print strf
 
+def get_timestamp():
+    now = datetime.datetime.now()
+    time = datetime.datetime.timestamp(now)
+    print(time)
+
 if __name__ == "__main__":
     get_date()
     get_tomorrow()
